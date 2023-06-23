@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/ensambles.css' %}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <h2>Crea tu ensamble</h2>
+        <p>Escoge los componentes para tu PC y agrégale tu Pokémon favorito.</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div>
+                <label for="txtIndicador">Nombre del Pokémon:</label>
+                <div>
+                    <input type="text" id="txtIndicador" name="txtIndicador" required>
+                    <input type="button" id="btnInformacion" value="Buscar Pokémon">
+                </div>
+                <div id="info"></div>
+            </div>
+
+            <input type="submit" class="btn btn-primary" value="Guardar">
+            <a href="{% url 'resultado' %}" class="btn btn-secondary">Ver resultado</a>
+        </form>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'app/js/validation.js' %}"></script>
+    <script src="{% static 'app/js/validation-service.js' %}"></script>
+    <script src="{% static 'app/js/cargar-informacion.js' %}"></script>
+{% endblock %}

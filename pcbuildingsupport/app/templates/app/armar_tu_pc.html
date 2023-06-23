@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/hardware.css'%}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <section>
+            <div class="flex-container">
+                <div>
+                    <h2>Tips e informacion relevante para armar una PC tu mismo</h2>
+                    <p>Adquiere las piezas necesarias: Para armar una PC Gamer necesitarás los componentes básicos, como una CPU, una placa madre, una tarjeta gráfica, memoria RAM, una fuente de alimentación, almacenamiento (disco duro o SSD) y una carcasa. Además, podrías querer comprar un disipador de CPU para enfriar el procesador.</p>
+                    <p>Preparar el espacio: Antes de comenzar, asegúrate de tener un espacio amplio y limpio para trabajar. También necesitarás herramientas como destornilladores y alicates.</p>
+                </div>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_864312-MLA44398147319_122020-O.webp" alt="">
+            </div>
+            <h3>Pasos a seguir para armar una PC tu mismo</h3>
+            <p>1.-Instala la placa madre en la carcasa: Alinea la placa madre con los orificios de la carcasa y asegúrate de que esté firmemente sujeta. Conecta el cable de alimentación de la placa madre.</p>
+            <p>2.-Instalar el procesador: Levanta la palanca del zócalo del procesador en la placa madre y coloca el procesador en el zócalo correspondiente. Asegúrate de que los pines estén correctamente alineados. Baja la palanca para asegurar el procesador.</p>
+            <p>3.-Instala el disipador de CPU: Aplica la pasta térmica en la superficie del procesador y luego instala el disipador de CPU en la placa madre. Asegúrate de que esté bien fijado.</p>
+            <p>4.-Instala la memoria RAM: Inserta la memoria RAM en los slots correspondientes de la placa madre. Empuja la memoria RAM hasta que se sienta un clic, lo que indica que está bien fijada.</p>
+            <p>5.-Instala la tarjeta gráfica: Inserta la tarjeta gráfica en el slot PCIe de la placa madre. Asegúrate de que esté firmemente sujeta en su lugar. Conecta el cable de alimentación de la tarjeta gráfica.</p>
+            <p>6.-Conecta la fuente de alimentación: Conecta el cable de alimentación de la fuente de alimentación a la placa madre, a la tarjeta gráfica y a los discos duros/SSD. Conecta los cables de alimentación a los ventiladores y cualquier otro componente que los necesite.</p>
+            <p>7.-Conecta los cables de la carcasa: Conecta los cables de la carcasa a la placa madre, como los botones de encendido y reinicio, y los puertos USB y de audio.</p>
+            <p>8.-Conecta el monitor: Conecta el monitor a la tarjeta gráfica usando un cable HDMI, DisplayPort o DVI.</p>
+            <p>9.-Enciende la PC: Una vez que estés seguro de que todo está correctamente conectado, enciende la PC y verifica que todos los componentes estén funcionando correctamente.</p>
+            <p>¡Listo! Eso es todo lo que necesitas hacer para armar tu propia PC Gamer. Recuerda siempre trabajar con cuidado y precaución para evitar dañar los componentes. Si tienes alguna duda o problema, no dudes en preguntar a un experto o buscar información adicional en línea.</p>
+            <div id="video1"> <iframe width="560" height="315" src="https://www.youtube.com/embed/Y_LWt6M8VAA"></iframe>
+            </div>
+        </section>
+    </div>
+{% endblock %}

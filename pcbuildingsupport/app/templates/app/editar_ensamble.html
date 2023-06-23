@@ -1,0 +1,27 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/ensambles.css' %}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <h2>Editar Ensamble</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+        <a href="{% url 'resultado' %}" class="btn btn-primary">Regresar a Resultado</a>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        function confirmDelete() {
+            return confirm("¿Estás seguro de que deseas eliminar este registro?");
+        }
+    </script>
+{% endblock %}

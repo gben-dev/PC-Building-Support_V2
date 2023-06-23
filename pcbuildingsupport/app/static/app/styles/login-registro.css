@@ -1,0 +1,53 @@
+.container > div {
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.container form {
+    background-color: #222;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 25px 50px;
+    border-radius: 5px;
+}
+
+div label, div input {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+form div {
+    padding: 25px 0;
+}
+
+form > button {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #545454;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div a {
+    margin-top: 20px;
+}
+
+.container div a:hover {
+    text-decoration: underline;
+}
+
+.container li, .container span {
+    font-size: 14px;
+    color: #ddd;
+}
+
+form ul {
+    margin-top: 7px;
+}

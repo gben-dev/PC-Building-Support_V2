@@ -1,0 +1,150 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/hardware.css'%}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <section>
+            <div class="flex-container">
+                <div>
+                    <h2>Motherboard (Placa Madre)</h2>
+                    <p>La placa madre, conocida como placa base o motherboard, es un componente fundamental de un ordenador que conecta todos los demás componentes entre sí y se encarga de la comunicación y el intercambio de datos entre ellos. Es importante elegir una placa madre adecuada para garantizar la compatibilidad y el correcto funcionamiento de todos los componentes del sistema.</p>
+                </div>
+                <img src="{% static 'app/img/motherboard.png' %}" alt="Motherboard">
+            </div>
+
+            <h3>Chipset</h3>
+            <p>El chipset es un conjunto de circuitos electrónicos que se encuentra en la placa madre de un ordenador. Es el encargado de controlar y coordinar la comunicación entre el procesador, la memoria RAM, las tarjetas gráficas y otros componentes de la placa madre. Es importante elegir un chipset adecuado y de calidad para mejorar la velocidad y la eficiencia del sistema.</p>
+        </section>
+
+        <section>
+            <div class="flex-container">
+                <div>
+                    <h2>Procesador (CPU)</h2>
+                    <p>La CPU (Central Processing Unit) o Unidad Central de Procesamiento es el cerebro de un ordenador. Es el componente más importante de la computadora, ya que se encarga de procesar y ejecutar las instrucciones del software y de controlar todos los demás componentes del sistema. La CPU es un chip que se encuentra en la placa base de la computadora y está formado por varios núcleos. Cada núcleo es capaz de procesar una instrucción a la vez. Cuantos más núcleos tenga la CPU, más instrucciones podrá procesar al mismo tiempo, lo que se traduce en una mayor velocidad y eficiencia de la computadora.</p>
+                </div>
+                <img src="{% static 'app/img/cpu.webp' %}" alt="a hand holding a cpu">
+            </div>
+
+            <div class="flex-container">
+                <div>
+                    <h3>Intel</h3>
+                    <p>Los procesadores Intel son fabricados por Intel Corporation. Estos procesadores son el cerebro de un ordenador. Estos se diferencian por su velocidad de reloj, número de núcleos y capacidad de procesamiento, y son conocidos por su alto rendimiento, eficiencia energética y capacidad de ejecutar tareas de alta demanda.</p>
+                </div>
+                <img src="{% static 'app/img/intel-cpu.jpg' %}" alt="a hand holding a cpu">
+            </div>
+
+            <div class="flex-container">
+                <div>
+                    <h3>AMD</h3>
+                    <p>Los procesadores AMD son fabricados por Advanced Micro Devices, Inc. Estos son el cerebro de un ordenador y se diferencian por su velocidad de reloj, número de núcleos y capacidad de procesamiento. AMD ofrecen un alto rendimiento a un precio más accesible que los procesadores Intel y son conocidos por su capacidad de manejar tareas multitarea y aplicaciones de alto rendimiento.</p>
+                </div>
+                <img src="{% static 'app/img/amd-cpu.webp' %}" alt="a hand holding a cpu">
+            </div>
+
+            <div class="flex-container">
+                <div>
+                    <h3>Sockect</h3>
+                    <p>El socket es el componente físico de la placa madre que se utiliza para conectar el procesador al resto de la placa madre. Es importante elegir una placa madre que tenga un socket compatible con el procesador que se desea utilizar. Cada procesador está diseñado para funcionar con un tipo específico de socket, por lo que es necesario asegurarse de que el procesador y la placa madre sean compatibles antes de realizar una compra.</p>
+                </div>
+                <img src="{% static 'app/img/socket.webp' %}" alt="a cpu socket">
+            </div>
+        </section>
+
+        <section>
+            <div class="flex-container">
+                <div>
+                    <h2>Memoria RAM</h2>
+                    <p>La memoria RAM es un componente importante de un ordenador que se utiliza para almacenar temporalmente los datos y programas que el procesador necesita para trabajar en un momento determinado. Cuanta más memoria RAM tenga un ordenador, más programas podrá ejecutar al mismo tiempo y más rápido será el rendimiento de la computadora.</p>
+                </div>
+                <img src="{% static 'app/img/ram.jpg'%}" alt="">
+            </div>
+        </section>
+
+        <section>
+            <h2>Almacenamiento</h2>
+            <p>El almacenamiento se utiliza para guardar y almacenar información de manera permanente o temporal en un ordenador. Los discos duros y los SSD son los dos tipos principales de almacenamiento utilizados en la actualidad. Es importante elegir el tipo de almacenamiento adecuado en función de las necesidades de cada usuario y tener suficiente almacenamiento para guardar los programas y archivos necesarios.</p>
+
+            <div class="flex-container">
+                <div>
+                    <h3>Disco duro (HDD)</h3>
+                    <p>Un disco duro o HDD es un dispositivo de almacenamiento que utiliza discos magnéticos para guardar información de manera permanente en un ordenador. Tiene una capacidad de almacenamiento alta y suele ser más económico que otros dispositivos de almacenamiento como los SSD, pero su velocidad de lectura y escritura es más lenta.</p>
+                </div>
+                <img src="{% static 'app/img/hdd.jpg'%}" alt="">
+            </div>
+
+            <div class="flex-container">
+                <div>
+                    <h3>Unidades SSD</h3>
+                    <p>El SSD o Disco de Estado Sólido es un dispositivo de almacenamiento que utiliza memoria flash para guardar información de manera permanente en un ordenador. Son más rápidos, resistentes y eficientes en energía que los discos duros, aunque su capacidad de almacenamiento suele ser menor y su precio por gigabyte de almacenamiento es más alto.</p>
+                </div>
+                <img src="{% static 'app/img/ssd.jpg'%}" alt="">
+            </div>
+        </section>
+
+        <section>
+            <h2>Tarjeta de Video (GPU)</h2>
+            <p>Una tarjeta de video se encarga de procesar y generar las imágenes que se muestran en el monitor. Permite que el ordenador pueda mostrar gráficos y videos de alta calidad sin afectar el rendimiento del procesador principal, y es ideal para aplicaciones que requieren una mayor capacidad de procesamiento gráfico, como juegos, diseño gráfico, animación y edición de video.</p>
+            
+            <div class="flex-container">
+                <div>
+                    <h3>Nvidia</h3>
+                    <p>NVIDIA es una empresa que fabrica tarjetas de video y otros componentes para ordenadores. Estas utilizan su propia tecnología de procesamiento gráfico, y cuentan con tecnologías exclusivas como la tecnología de trazado de rayos en tiempo real (RTX). Son muy populares en la industria del gaming y en otros ámbitos que requieren una alta capacidad de procesamiento gráfico.</p>
+                </div>
+                <img src="{% static 'app/img/nvidia-gpu.png'%}" alt="">
+            </div>
+
+            <div class="flex-container">
+                <div>
+                    <h3>AMD Radeon</h3>
+                    <p>AMD Radeon es una marca de tarjetas de video fabricadas por la empresa AMD. Están diseñadas para proporcionar un alto rendimiento en tareas que requieren una gran capacidad de procesamiento gráfico, como juegos, diseño gráfico y edición de video. Utilizan su propia tecnología de procesamiento gráfico, conocida como Radeon, y cuentan con tecnologías exclusivas como AMD FreeSync y AMD CrossFire.</p>
+                </div>
+                <img src="{% static 'app/img/amd-gpu.png'%}" alt="">
+            </div>
+        </section>
+
+        <section>
+            <div class="flex-container">
+                <div>
+                    <h2>Fuente de poder (PSU)</h2>
+                    <p>La fuente de poder se encarga de proporcionar energía eléctrica a todos los componentes del ordenador. Convierte la corriente eléctrica en corriente continua, regula la cantidad de energía que se proporciona a cada componente y es importante elegir una fuente de poder de calidad y compatible con los componentes del ordenador.</p>
+                </div>
+                <img src="{% static 'app/img/psu.jpg'%}" alt="">
+            </div>
+
+
+            <h3>Consumo en Watts</h3>
+            <p>El consumo de watts se refiere a la cantidad de energía eléctrica que un componente o dispositivo consume mientras está en funcionamiento. Es importante tener en cuenta el consumo de watts de cada componente al elegir una fuente de poder para el ordenador.</p>
+
+            <div class="flex-container">
+                <div>
+                    <h3>Certificación</h3>
+                    <p>La certificación es la evaluación de un componente que determina si cumple con ciertos estándares de calidad y seguridad. En el caso de las fuentes de poder, existen varias certificaciones que evalúan su eficiencia energética, seguridad y confiabilidad.</p>
+                </div>
+                <img src="{% static 'app/img/80plus-bronze.png'%}" alt="">
+            </div>
+        </section>
+
+        <section>
+            <div class="flex-container">
+                <div>
+                    <h2>Gabinete</h2>
+                    <p>El gabinete es la carcasa que protege y contiene todos los componentes de hardware de un ordenador, y puede tener diferentes tamaños, formas, diseños y materiales. Además, tiene puertos y conectores en la parte trasera para conectar los dispositivos de entrada y salida.</p>
+                </div>
+                <img src="{% static 'app/img/pc-case.jpg'%}" alt="">
+            </div>
+
+            <div class="flex-container">
+                <div>
+                    <h3>Ventilación</h3>
+                    <p>Los ventiladores son componentes de hardware que se utilizan para mantener los componentes de un ordenador frescos y evitar el sobrecalentamiento. Hay varios tipos de ventiladores en un ordenador y es importante mantenerlos limpios y funcionando correctamente para garantizar el correcto funcionamiento del sistema.</p>
+                </div>
+                <img src="{% static 'app/img/case-fan.jpg'%}" alt="">
+            </div>
+        </section>
+    </div>
+{% endblock %}

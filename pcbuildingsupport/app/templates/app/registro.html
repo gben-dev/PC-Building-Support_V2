@@ -1,0 +1,20 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/login-registro.css' %}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <div>
+            <h2>Registrate</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

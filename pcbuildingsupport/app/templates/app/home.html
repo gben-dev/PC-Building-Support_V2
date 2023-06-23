@@ -1,0 +1,88 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/carousel.css' %}">
+{% endblock %}
+
+{% block contenido %}
+    <!--image slider start-->
+    <div class="slider">
+        <div class="slides">
+        <!--radio buttons start-->
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--radio buttons end-->
+        <!--slide images start-->
+        <div class="slide first">
+            <img src="{% static 'app/img/carousel1.jpg'%}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'app/img/carousel2.jpg'%}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'app/img/carousel3.jpg'%}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'app/img/carousel4.jpg'%}" alt="">
+        </div>
+        <!--slide images end-->
+        <!--automatic navigation start-->
+        <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+        </div>
+        <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+    </div>
+    <!--image slider end-->
+
+    <div class="container">
+        <section class="site-intro">
+            <div class="content">
+                <h2>PC Building Support es la web que te proporciona los conocimientos necesarios para que puedas armar tu propio pc</h2>
+                <p>Bienvenido a nuestro sitio web PC Building Support en donde podrás encontrar información sobre como armar tu propia PC Gamer, información sobre cada componente de este mismo, además de tips que te podrían ser útil en el armado al igual que una guía con pasos a seguir, esperamos que esta página sea de tu agrado ya que te mantendremos al tanto de los futuros componentes que vayan saliendo.</p>
+            </div>
+        </section>
+        <section class="hardware">
+            <div class="content">
+                <h2>Conoce los componentes de un computador</h2>
+                <p>Los componentes de un computador son las partes físicas que conforman la máquina y permiten su funcionamiento, estas están conformadas por la: CPU, Placa madre, Memoria RAM, Almacenamiento, Tarjeta gráfica, Fuente de alimentación, Gabinete, Ventiladores. </p>
+                <a href="{% url 'hardware' %}" class="btn-page">Ir a Hardware</a>
+            </div>
+        </section>
+        <section class="build-pc">
+            <div class="content">
+                <h2>Arma tu computador paso a paso</h2>
+                <p>Todo lo que necesitas saber para armar tu propia PC Gamer te lo diremos aqui. Recuerda siempre trabajar con cuidado y precaución para evitar dañar tus componentes. Si llegas a tener alguna duda o problema, no dudes en preguntar a un experto.</p>
+                <a href="{% url 'armar_tu_pc' %}" class="btn-page">Arma tu PC</a>
+            </div>
+        </section>
+        <section class="completed-builds">
+            <div class="content">
+                <h2>Ensambles de ejemplo</h2>
+                <p>Antes de armar tu PC recuerda preparar el espacio donde lo armaras, asegúrate de que sea un espacio amplio y limpio para trabajar. También necesitarás herramientas como destornilladores y alicates.</p>
+                <a href="{% url 'ensambles' %}" class="btn-page">Ir a los ensambles</a>
+            </div>
+        </section>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="{% static 'app/js/carousel.js' %}">
+    </script>
+{% endblock %}

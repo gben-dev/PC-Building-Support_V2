@@ -1,0 +1,56 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'app/styles/resultado.css' %}">
+{% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <div>
+            <h2>Resultado</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Procesador</th>
+                        <th>Memoria RAM</th>
+                        <th>Disco Duro</th>
+                        <th>Tarjeta de Video</th>
+                        <th>Fuente de Poder</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ensamble in ensambles %}
+                    <tr>
+                        <td>{{ ensamble.procesador }}</td>
+                        <td>{{ ensamble.memoria_ram }}</td>
+                        <td>{{ ensamble.disco_duro }}</td>
+                        <td>{{ ensamble.tarjeta_video }}</td>
+                        <td>{{ ensamble.fuente_poder }}</td>
+                        <td>
+                            <form method="post" action="{% url 'eliminar_ensamble' ensamble.id %}" onsubmit="return confirm('¿Estás seguro de eliminar este registro?')">
+                                {% csrf_token %}
+                                {% if user.is_staff %}
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                                {% endif %}
+                            </form>
+                            <a href="{% url 'editar_ensamble' ensamble.id %}" class="btn btn-primary">Editar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <a href="{% url 'ensambles' %}" class="btn btn-primary">Regresar al formulario</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+<script>
+    function confirmDelete() {
+        return confirm("¿Estás seguro de que deseas eliminar este registro?");
+    }
+</script>
+{% endblock %}
