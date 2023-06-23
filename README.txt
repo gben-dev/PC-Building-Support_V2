@@ -7,5 +7,5 @@ Admin y usuario del proyecto:
 	User:pasas
 	12345pasa
 
-Link de GitHub:
+Link de GitHub: https://github.com/gben03/PC-Building-Support_V2.git
 	
